@@ -1,0 +1,41 @@
+<p>c1 works!</p>
+S2= <input [(ngModel)]="s2"><br>
+Num1={{num1 | sqrt }}<br>
+{{s2 | lowercase}}<br>
+{{n1}}<br>
+{{a1}}
+{{b1}}
+<ul>
+    <li *ngFor="let i of a1">
+        {{i}}
+    </li>
+</ul>
+<button (click)="f1()">Click</button>
+<button [disabled]="b1">Click here</button>
+
+<span *ngIf="b1!=true">
+<select>
+    <option *ngFor="let j of a1">{{j}}</option>
+</select>
+</span>
+
+<br>
+<div>
+    <p>{{'some string' | titlecase}}</p> <!-- output is expected to be "Some String" -->
+    
+  </div>
+  <p>A: {{a | percent}}</p>
+
+  <!--output '0,134.950%'-->
+  <p>B: {{b | percent:'4.3-5'}}</p>
+  <ul>
+    <li *ngFor="let i of collection | slice:1">{{i}}</li>
+  </ul>
+  <div>
+    <p>{{str}}[0:4]: '{{str | slice:0:4}}' - output is expected to be 'abcd'</p>
+    <p>{{str}}[4:0]: '{{str | slice:4:0}}' - output is expected to be ''</p>
+    <p>{{str}}[-4]: '{{str | slice:-4}}' - output is expected to be 'ghij'</p>
+    <p>{{str}}[-4:-2]: '{{str | slice:-4:-2}}' - output is expected to be 'gh'</p>
+    <p>{{str}}[-100]: '{{str | slice:-100}}' - output is expected to be 'abcdefghij'</p>
+    <p>{{str}}[100]: '{{str | slice:100}}' - output is expected to be ''</p>
+  </div>

@@ -1,0 +1,22 @@
+<h1>Welcome</h1>
+{{title}}<br>
+{{s1}}
+<h3>Hello I am in app comp</h3>
+<table border="1">
+    <tr>
+        <td>
+            <nav>
+                <a routerLink="bookform">Book Form</a><br><br>
+                <a routerLink="rform">Reactive Form</a><br><br>
+                <a routerLink="tempform">Template Form</a><br><br>
+                <a routerLink="chatform">Chat Now</a><br><br>
+                <a routerLink="heroes">Heroes</a><br><br>
+                <a routerLink="comp1">Comp 1</a><br><br>
+                <a routerLink="comp2">Comp 2</a>
+            </nav>
+        </td>
+        <td width="500">
+            <router-outlet></router-outlet>
+        </td>
+    </tr>
+</table>

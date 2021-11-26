@@ -1,0 +1,7 @@
+<h2>Reactive From</h2>
+<form [formGroup]="userform" (ngSubmit)="submit()">
+    User name:  <input type="text" name="username" formControlName="username">
+    <br>
+    Email:  <input type="text" name="email" formControlName="email"><br>
+    <input type="submit" [disabled]="userform.invalid">
+</form>
